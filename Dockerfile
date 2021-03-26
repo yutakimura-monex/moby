@@ -11,7 +11,7 @@ ARG DOCKER_BUILDTAGS="apparmor seccomp"
 ARG BASE_DEBIAN_DISTRO="buster"
 ARG GOLANG_IMAGE="golang:${GO_VERSION}-${BASE_DEBIAN_DISTRO}"
 
-FROM ${GOLANG_IMAGE} AS base
+FROM go-dev:latest AS base
 RUN echo 'Binary::apt::APT::Keep-Downloaded-Packages "true";' > /etc/apt/apt.conf.d/keep-cache
 ARG APT_MIRROR
 RUN sed -ri "s/(httpredir|deb).debian.org/${APT_MIRROR:-deb.debian.org}/g" /etc/apt/sources.list \
