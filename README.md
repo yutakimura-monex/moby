@@ -8,6 +8,14 @@ Docker コンテナをビルド環境として使います。普通に Docker �
 2. make
 3. bundles ディレクトリにバイナリが出力されます。利用環境に配備して使用してください。
 
+## 使い方
+環境変数にプロキシを設定して dockerd を起動します。
+
+`https_proxy=http://user:password@proxyhost:proxyport/ sudo -E ./dockerd`
+
+### systemd 環境の場合
+https://docs.docker.com/config/daemon/systemd/
+
 ## 補足事項
 - 15GB程度のディスク容量が必要です。
 - Go言語の net/http をダイジェスト認証プロキシに対応させたSDKを使います。
