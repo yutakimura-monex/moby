@@ -20,3 +20,4 @@ https://docs.docker.com/config/daemon/systemd/
 - 15GB程度のディスク容量が必要です。
 - Go言語の net/http をダイジェスト認証プロキシに対応させたSDKを使います。
 - tag v20.10.5 から派生した main ブランチを使用しています。
+- プロキシのDNSを解決できない場合があります。プロキシをIP指定してみてください。
